@@ -155,7 +155,7 @@ export default function Home() {
       <div className="mt-5 font-extrabold bg-[#03346E] p-3 text-xl text-[#E2E2B6] rounded-md w-[30vw] text-center">
         {
           hint == "" ?
-            <p className="flex justify-center items-center">
+            <p className="flex flex-col lg:flex-row justify-center items-center">
               Click on 
               <Image
                 src="hint.svg"
@@ -172,15 +172,15 @@ export default function Home() {
       </div>
 
       {/*Button Group for Hint and Reveal Word*/}
-      <div className="flex flex-col gap-3 mt-4 w-[15vw] text-[#03346E] font-semibold">
-        <div className="flex gap-3 w-full">
-          <button className="flex justify-center items-center bg-slate-200 hover:bg-slate-400 p-2 rounded-md w-[30%]"
+      <div className="flex flex-col gap-3 mt-4 w-[30vw] lg:w-[15vw] text-[#03346E] font-semibold">
+        <div className="flex flex-col md:flex-row gap-3 w-full">
+          <button className="flex justify-center items-center bg-slate-200 hover:bg-slate-400 p-2 rounded-md w-[100%] lg:w-[30%]"
             onClick={() => handleHint()}
           >
             Hint
           </button>
 
-          <button className="flex justify-center items-center bg-slate-200 hover:bg-slate-400 p-2 rounded-md w-[70%]"
+          <button className="flex justify-center items-center bg-slate-200 hover:bg-slate-400 p-2 rounded-md w-[100%] lg:w-[70%]"
             onClick={() => handleReveal()}
           >
             Reveal a Word
