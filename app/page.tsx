@@ -14,7 +14,7 @@ export default function Home() {
   const handleSubmit = () => {
     let temp_won = true
     inputs.forEach((input, idx) => {
-      if (input != words[idx].word) {
+      if (input.toLowerCase() != words[idx].word.toLowerCase()) {
         temp_won = false
       }
     })
